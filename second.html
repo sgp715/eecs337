@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#">Expose Me</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Thanks for creating an account Eric!</h1>
+            <p> Expose me uses a deep learning algorithm to learn more about you
+              and your preferances. The website then uses this information to show
+              you articles
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Recommended Article 1</h2>
+                <div id="mydiv">
+                    <iframe id="frame1" src="http://www.wikipedia.org/" width="100%" height="400"></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <h2>Recommended Article 2</h2>
+                <div id="mydiv">
+                    <iframe id="frame2" src="http://www.wikipedia.org/" width="100%" height="400"></iframe>
+                </div>
+                <!-- <p><a class="btn btn-default" href="#" role="button">View details »</a></p>-->
+
+            </div>
+            <div class="col-md-4">
+                <h2>Recommended Article 3</h2>
+                <div id="mydiv">
+                    <iframe id="frame3" src="http://www.wikipedia.org/" width="100%" height="400"></iframe>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <p>© 2016 Expose Me, Inc.</p>
+        </footer>
+    </div>
+
+    <script>
+        function loadArticle() {
+            var el = document.getElementById('frame1');
+            el.src = document.getElementById("article1").value;
+
+            var el = document.getElementById('frame2');
+            el.src = document.getElementById("article1").value;
+
+            var el = document.getElementById('frame3');
+            el.src = document.getElementById("article1").value;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
