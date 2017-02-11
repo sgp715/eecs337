@@ -1,44 +1,41 @@
-<!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+</head>
 
-  <body>
+<body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#">Expose Me</a>
+                <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#">Expose Me</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                </form>
+            </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-          </form>
-        </div>
-      </div>
     </nav>
 
     <div class="jumbotron">
-      <div class="container">
-        <h1>Tell us about you!</h1>
-          First name:<br>
-          <input type="text" name="firstname"><br>
-          Last name:<br>
-          <input type="text" name="lastname"><br>
-          Email:<br>
-          <input type="text" name="Email"><br>
-          Password:<br>
-          <input type="text" name="Passoword"><br>
-          What State Do you live in?<br>
-          <select>
+        <div class="container">
+            <h1>Tell us about yourself!</h1> First name:<br>
+            <input type="text" name="firstname"><br> Last name:<br>
+            <input type="text" name="lastname"><br> Email:
+            <br>
+            <input type="text" name="Email"><br> Password:
+            <br>
+            <input type="text" name="Passoword"><br> What State Do you live in?<br>
+            <select>
             	<option value="AL">Alabama</option>
             	<option value="AK">Alaska</option>
             	<option value="AZ">Arizona</option>
@@ -100,28 +97,25 @@
               <option value="AP">Armed Forces Pacific</option>
               <option value="AE">Armed Forces Others</option>
             </select><br>
-            <h4>What are your top three sources for news!</h4>
-            First source:<br>
+            <h4>What are your top three sources for news!</h4> First source:<br>
+            <input list="sources"><br> Second source:<br>
+            <input list="sources"><br> Third source:<br>
             <input list="sources"><br>
-            Second source:<br>
-            <input list="sources"><br>
-            Third source:<br>
-            <input list="sources"><br>
-
-            <div >
-              <label class="checkbox-inline"><input type="checkbox" value="">Quiz Articles</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Sports</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Politics</label>
+            <h4>Categories</h4>
+            <div>
+                <label class="checkbox-inline"><input type="checkbox" value="" >Quiz Articles</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Sports</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Politics</label>
             </div>
-            <div >
-              <label class="checkbox-inline"><input type="checkbox" value="">Environment</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Science/Tech</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Gaming</label>
+            <div>
+                <label class="checkbox-inline"><input type="checkbox" value="">Environment</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Science/Tech</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Gaming</label>
             </div>
-            <div >
-              <label class="checkbox-inline"><input type="checkbox" value="">Social Media</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">International</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Pop Culture</label>
+            <div>
+                <label class="checkbox-inline"><input type="checkbox" value="">Social Media</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">International</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Pop Culture</label>
             </div>
 
             <datalist id="sources">
@@ -143,33 +137,55 @@
             </datalist>
 
 
-		        <br><br>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Submit!</a></p>
-      </div>
+            <br><br>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Submit!</a></p>
+        </div>
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Recommended Article 1</h2>
-          <p>News news news. News news news. News news news.News news news.News news news.News news news. News news news.</p>
-          <p><a class="btn btn-default" href="https://www.nytimes.com/2017/02/10/us/politics/trump-foreign-policy-quickly-loses-its-sharp-edge.html" role="button">View details »</a></p>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Recommended Article 1</h2>
+                <div id="mydiv">
+                    <iframe id="frame1" src="http://www.wikipedia.org/" width="100%" height="400"></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <h2>Recommended Article 2</h2>
+                <div id="mydiv">
+                    <iframe id="frame2" src="http://www.wikipedia.org/" width="100%" height="400"></iframe>
+                </div>
+                <!-- <p><a class="btn btn-default" href="#" role="button">View details »</a></p>-->
+
+            </div>
+            <div class="col-md-4">
+                <h2>Recommended Article 3</h2>
+                <div id="mydiv">
+                    <iframe id="frame3" src="http://www.wikipedia.org/" width="100%" height="400"></iframe>
+                </div>
+
+            </div>
         </div>
-        <div class="col-md-4">
-          <h2>Recommended Article 2</h2>
-          <p>News news news. News news news. News news news.News news news.News news news.News news news. News news news.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Recommended Article 1</h2>
-          <p>News news news. News news news. News news news.News news news.News news news.News news news. News news news.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-      </div>
-      <hr>
-      <footer>
-        <p>© 2016 Expose Me, Inc.</p>
-      </footer>
+        <hr>
+        <footer>
+            <p>© 2016 Expose Me, Inc.</p>
+        </footer>
     </div>
-    </body>
+
+    <script>
+        function loadArticle() {
+            var el = document.getElementById('frame1');
+            el.src = document.getElementById("article1").value;
+
+            var el = document.getElementById('frame2');
+            el.src = document.getElementById("article1").value;
+
+            var el = document.getElementById('frame3');
+            el.src = document.getElementById("article1").value;
+        }
+    </script>
+
+</body>
+
 </html>
