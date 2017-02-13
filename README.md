@@ -1,9 +1,10 @@
 # EXPOSE ME
 
-## Install
-* You also need [Bootstrap](http://getbootstrap.com/)
+# Install
+* run this to install python dependencies
+```
+pip install -r requirements.txt
+```
 
 ## Usage
 * Open up index.html to go to the homepage
-
-##This is a test

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block container %}
+    <style>
+
+        .cols {
+            -moz-column-count:1;
+            -moz-column-gap: 3%;
+            -moz-column-width: 50%;
+            -webkit-column-count:1;
+            -webkit-column-gap: 3%;
+            -webkit-column-width: 50%;
+            column-count: 1 ;
+            column-gap: 3%;
+            column-width: 50%;
+        }
+        .box {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            height:200px;
+            background-color: #95A5A6;
+            padding: 10px;
+            color: black;
+            text-align: center;
+        }
+        .button {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            height: 100px;
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+        .box.green {
+            background-color: #33FF68;
+        }
+        .inner {
+            background-color: white;
+            width: 99%;
+            height: 99%;
+            margin: 0 auto;
+            color: black;
+            font-size: 500%;
+        }
+    </style>
+    <div id="container" class="cols">
+        <h1>Click the ones you like!</h1>
+        <div class="box">
+            <div class="inner"> News news news...</div>
+        </div>
+        <div class="box">
+            <div class="inner"> News news news...</div>
+        </div>
+        <div class="box">
+            <div class="inner"> News news news...</div>
+        </div>
+        <div class="box">
+            <div class="inner"> News news news...</div>
+        </div>
+        <div class="box">
+            <div class="inner"> News news news...</div>
+        </div>
+        <a href="/home">
+            <div class="button"><h1>Submit</h1></div>
+        </a>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".box").click(function () {
+                $(this).toggleClass("green");
+            });
+        });
+    </script>
+{% endblock %}
