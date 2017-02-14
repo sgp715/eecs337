@@ -1,12 +1,203 @@
 {% extends "base.html" %}
 {% block container %}
 <div class="container">
-    <br>
-    <form>
-        <a href="home"> login </a>
-    </form>
-    <form>
-        <a href="profile"> register </a>
-    </form>
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                    <!-- <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div> -->
+                </div>
+                <div style="padding-top:30px" class="panel-body" >
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                    <form id="loginform" class="form-horizontal" role="form">
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                                </div>
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                </div>
+
+
+
+                        <div class="input-group">
+                                  <div class="checkbox">
+                                    <!-- <label>
+                                      <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                    </label> -->
+                                  </div>
+                                </div>
+
+
+                            <div style="margin-top:10px" class="form-group">
+                                <!-- Button -->
+
+                                <div class="col-sm-12 controls">
+                                  <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                  <!-- <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a> -->
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                        Don't have an account!
+                                    <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                        Sign Up Here
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    </div>
+    <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign Up</div>
+                        <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                    </div>
+                    <div class="panel-body" >
+                        <form id="signupform" class="form-horizontal" role="form">
+
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-md-3 control-label">Email</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">State</label>
+                                <div class="col-md-9">
+                                    <select class="selectpicker">
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="VI">Virgin Islands</option>
+                                        <option value="AA">Armed Forces Americas</option>
+                                        <option value="AP">Armed Forces Pacific</option>
+                                        <option value="AE">Armed Forces Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">List your top 3 news sources</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" placeholder="source 1, source 2, source 3">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Categories</label>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Fake</label></div>
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Sports</label></div>
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Politics</label></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Business</label></div>
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Science</label></div>
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Gaming</label></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Social</label></div>
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Tech</label></div>
+                                        <div class="col-md-3" ><label class="checkbox-inline"><input type="checkbox" value="">Pop</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-3 col-md-9">
+                                <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                <!-- <span style="margin-left:8px;">or</span> -->
+                            </div>
+                            </div>
+                            <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                                <!-- <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
+                                </div> -->
+                            </div>
+                        </form>
+                     </div>
+                </div>
+     </div>
 </div>
+
 {% endblock %}
