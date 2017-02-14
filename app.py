@@ -7,10 +7,6 @@ app = Flask(__name__)
 def index():
     return render_template("login.html")
 
-@app.route('/profile', methods=['POST'])
-def profile():
-    return render_template("profile.html")
-
 @app.route('/recommended', methods=['GET'])
 def recomended():
     return render_template("recommended.html")
