@@ -1,5 +1,32 @@
 {% extends "base.html" %}
 {% block container %}
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="#">Expose Me</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <p class="navbar-brand">Signed in as Eric Mertz</p>
+            <form class="navbar-form navbar-right" role="search">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <button type="button" class="btn btn-default navbar-btn">Sign out</button>
+        </div>
+    </div>
+</nav>
+
+
 <div id="wrapper">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -34,13 +61,28 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1><a href="https://www.nytimes.com/2017/02/10/opinion/footing-the-bill-for-trumps.html?action=click&module=TrendingGrid&region=TrendingTop&pgtype=collection">Footing the Bill for Trumps</a></h1>
-                        <p>All these Trumps are getting damned expensive. Last month, taxpayers forked over nearly $100,000 to protect Eric Trump while he was on a business trip to Uruguay. And the Defense Department is looking to rent space in Trump Tower — which goes for as much as $1.5 million a year per floor — so they can bring the nuclear launch codes along when the president comes to visit his wife in New York.</p>
-                        <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
+        <div id="page-content-wrapper" >
+            <div class="container-fluid" >
+                <div class="row" align="left">
+                    <div class="col-lg-12" >
+                      <div class="media">
+                      <div class="media-left media-middle" >
+                        <a href="#">
+                          <img class="media-object" src="https://static01.nyt.com/images/2017/02/11/opinion/11collinsWeb/11collinsWeb-master768.jpg"
+                          alt="download.SVG" width="64" height="64">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading"> <a href="https://www.nytimes.com/2017/02/10/opinion/footing-the-bill-for-trumps.html?action=click&module=TrendingGrid&region=TrendingTop&pgtype=collection">
+                          Footing the Bill for Trumps</a></h4>
+                          All these Trumps are getting damned expensive.
+                          Last month, taxpayers forked over nearly $100,000 to protect Eric Trump
+                          while he was on a business trip to Uruguay. And the Defense Department
+                          is looking to rent space in Trump Tower — which goes for as much as $1.5 million
+                          a year per floor — so they can bring the nuclear launch codes along when the president
+                          comes to visit his wife in New York.
+                      </div>
+                      </div>
                     </div>
                 </div>
             </div>
