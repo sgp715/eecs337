@@ -140,7 +140,42 @@
           <h4 class="modal-title">Tell us why you like this article!</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+         <div>
+          <p>Rate how biased this article was (1: very biased 5: not biased)</p>
+        <label class="radio-inline"><input type="radio" name="good_first">1</label>
+        <label class="radio-inline"><input type="radio" name="good_first">2</label>
+        <label class="radio-inline"><input type="radio" name="good_first">3</label>
+        <label class="radio-inline"><input type="radio" name="good_first">4</label>
+        <label class="radio-inline"><input type="radio" name="good_first">5</label>
+        </div>
+        <div>
+        <p>Rate the content of this article (1: very bad 5: very good)</p>
+        <label class="radio-inline"><input type="radio" name="good_second">1</label>
+        <label class="radio-inline"><input type="radio" name="good_second">2</label>
+        <label class="radio-inline"><input type="radio" name="good_second">3</label>
+        <label class="radio-inline"><input type="radio" name="good_second">4</label>
+        <label class="radio-inline"><input type="radio" name="good_second">5</label>
+        </div>
+        <div>
+        <p>How interesting was the article? (1: not really 5: very interesting)</p>
+        <label class="radio-inline"><input type="radio" name="good_third">1</label>
+        <label class="radio-inline"><input type="radio" name="good_third">2</label>
+        <label class="radio-inline"><input type="radio" name="good_third">3</label>
+        <label class="radio-inline"><input type="radio" name="good_third">4</label>
+        <label class="radio-inline"><input type="radio" name="good_third">5</label>
+        </div>
+        <div>
+        <p>Would you recommend it?</p>
+        <label class="radio-inline"><input type="radio" name="good_fourth">yes</label>
+        <label class="radio-inline"><input type="radio" name="good_fourth">no</label>
+        </div>
+        <div>
+        </div>
+        <br>
+        <div class="form-group">
+        <label for="comment">Additional comments on why you like this article:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Submit!</button>
@@ -161,11 +196,47 @@
           <h4 class="modal-title">Tell us why you didn't like this article!</h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+        <div>
+          <p>Rate how biased this article was (1: very biased 5: not biased)</p>
+        <label class="radio-inline"><input type="radio" name="bad_first">1</label>
+        <label class="radio-inline"><input type="radio" name="bad_first">2</label>
+        <label class="radio-inline"><input type="radio" name="bad_first">3</label>
+        <label class="radio-inline"><input type="radio" name="bad_first">4</label>
+        <label class="radio-inline"><input type="radio" name="bad_first">5</label>
+        </div>
+        <div>
+        <p>Rate the content of this article (1: very bad 5: very good)</p>
+        <label class="radio-inline"><input type="radio" name="bad_second">1</label>
+        <label class="radio-inline"><input type="radio" name="bad_second">2</label>
+        <label class="radio-inline"><input type="radio" name="bad_second">3</label>
+        <label class="radio-inline"><input type="radio" name="bad_second">4</label>
+        <label class="radio-inline"><input type="radio" name="bad_second">5</label>
+        </div>
+        <div>
+        <p>How interesting was the article? (1: not really 5: very interesting)</p>
+        <label class="radio-inline"><input type="radio" name="bad_third">1</label>
+        <label class="radio-inline"><input type="radio" name="bad_third">2</label>
+        <label class="radio-inline"><input type="radio" name="bad_third">3</label>
+        <label class="radio-inline"><input type="radio" name="bad_third">4</label>
+        <label class="radio-inline"><input type="radio" name="bad_third">5</label>
+        </div>
+        <div>
+        <p>Would you recommend it?</p>
+        <label class="radio-inline"><input type="radio" name="bad_fourth">yes</label>
+        <label class="radio-inline"><input type="radio" name="bad_fourth">no</label>
+        </div>
+        <br>
+        <div class="form-group">
+        <label for="comment">Additional comments on why you dislike this article:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        </div>
+        <div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Submit!</button>
         </div>
+        
       </div>
 
     </div>
@@ -178,11 +249,9 @@
                     "https://www.wired.com/2017/02/trump-sends-nasa-moon-congress-might/"
                 );
             }
-
             function buzzfeedArticle2() {
                 window.open("https://www.buzzfeed.com/daves4/why-would-you-do-this?utm_term=.mmwxqe43P#.npdQVqOBy");
             }
-
             function BloombergArticle() {
                 window.open("https://www.bloomberg.com/news/articles/2017-02-16/asian-stocks-drop-as-yen-gold-strength-prevails-markets-wrap");
             }
