@@ -15,9 +15,9 @@ def recomended():
 def home():
     return render_template("home.html")
 
-@app.route('/somethingNew', methods=['GET'])
-def somethingNew():
-    return render_template("somethingNew.html")
+@app.route('/something_new', methods=['GET'])
+def something_new():
+    return render_template("something_new.html")
 
 
 
