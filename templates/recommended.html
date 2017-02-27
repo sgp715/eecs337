@@ -1,41 +1,14 @@
 <!DOCTYPE HTML>
-<html lang="en">
 
-<head>
-    <title>Expose Me Introduction</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+{% extends "base.html" %}
+{% block container %}
 
-</head>
 
-<body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-                <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#">Expose Me</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <div class="jumbotron">
         <div class="container">
             <h1>Thanks for creating an account, Eric!</h1>
             <p> Expose me uses a deep learning algorithm to learn more about you and what you like! We then use this info to sift through hundreds of articles so you dont have to! You can help us learn more by reviwing the articles below, or just go to our
                 home page by clicking here </p>
         </div>
-    </div>
 
     <div class="container">
         <!--  NY times science article here-->
@@ -104,10 +77,7 @@
 
 
 <p><a id="btn-login" href="/home" class="btn btn-success">Submit!</a></p>
-        <hr>
-        <footer>
-            <p>© 2016 Expose Me, Inc.</p>
-        </footer>
+
     </div>
 
     <!--<script>
@@ -123,10 +93,5 @@
         }
     </script>-->
 
-
-
-
-
-</body>
-
-</html>
+</div>
+{% endblock %}
