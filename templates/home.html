@@ -34,15 +34,15 @@
 
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Start Exposing!
+                    <a href="#" onClick="$('#sciencebox').hide(); $('#homebox').show()" >
+                        Home
                     </a>
                 </li>
                 <li>
                     <a href="#">Popular</a>
                 </li>
                 <li>
-                    <a href="#">Science</a>
+                    <a href="#" onClick="$('#current').hide(); $('#sciencebox').show()"> Science</a>
                 </li>
                 <li>
                     <a href="#">Sports</a>
@@ -66,7 +66,14 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper" >
-    <div class="container-fluid">
+    <div class="container-fluid" id="homebox">
+      <script>
+
+    $(document).ready(function(){
+      $('#homebox').attr('id', 'current')
+      });
+      select()
+</script>
         <div class="row">
             <div class="col-md-9">
               <div class="media">
@@ -184,6 +191,14 @@
     </div>
 
 
+    <div class="container-fluid" id="sciencebox" style="display: none;">
+
+        <div class="row">
+          <h1>HI THERE</h1>
+        </div>
+    </div>
+
+
     </div>
 
 
@@ -192,6 +207,7 @@
         <!-- /#page-content-wrapper -->
 
     <script>
+    var temp = ""
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
